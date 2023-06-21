@@ -1,0 +1,154 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: visible;  
+  /* 드롭다운메뉴가 확장될 때 메뉴 공간이 부족하여 오버플로우 발생
+     overflow: visible; 은 오버클로우되는 콘텐츠를 잘라내지 않고 
+     영역 범위 밖까지 콘텐츠를 출력함
+     overflow: hidden은 오버클로우되는 콘텐츠를 잘라냄. */
+  background-color: #333;
+  position: sticky;
+  top:0px;
+  /* position: sticky는 미리 정의한 위치에 도달하기 전에는 
+               다른 요소와 함께 스크롤 됨
+     위치를 정의하기 위해 left, right, top, bottom 속성 사용
+     top:0px; 은 화면(뷰포트)의 상단 0px 위치를 지정
+     ul 요소는 뷰포트의 상단 0px 위치에 도달하면 sticky가 됨. 
+     sticky는 화면에 마치 붙여놓은 것처럼 위치가 고정되는 것을 의미  
+     스크롤 할 때 다른 요소는 함께 스크롤되지만 
+     ul요소는 상단 0px 위치에 고정되어 움직이지 않음.  */
+}
+
+li {
+  /* float: left; */
+  display: inline-block;
+  /* 가로방향으로 메뉴를 만들기 위해 두가지 방법 모두 사용 가능
+     float: left;  => li항목을 float(부유)시키고 왼쪽부터 차례로 배치 
+     display: inline-block; => 기본적으로 li는 display: block 요소임
+                               즉, li항목 출력 후 줄바꿈이 일어남
+     inline-block은 줄바꿈이 일어나지 않음
+     따라서 li항목 출력 후 줄바꿈 없이 다음 li 항목이 가로방향으로 출력됨                           
+     */
+}
+
+li a {
+  display: inline-block;
+  /* a 요소는 기본적으로 display: inline 요소임
+     inline 요소는 block 요소와 달리 콘텐츠의 크기만큼만 영역을 차지함
+     당연히 width, height, padding, margin 적용하지 못함. 
+     아래와 같이 padding: 14px 16px;을 지정하면 보기 좋게 출력됨. 
+     그러기 위해서는 display: inline-block로 바꾸어 주어야 함. 
+     결과적으로 width, height, padding, margin 적용 가능함. 
+     하지만 display: block 요소처럼 줄바꿈은 발생하지 않음.   
+  */
+  padding: 14px 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(255, 153, 0);
+}
+li a.blink:hover {
+  background-color: #333;
+}
+
+.font-zero{                /*nline-block 태그의 공백 삭제*/
+  font-size: 0;
+}
+
+.font-zero li a{
+  font-size: 1rem;
+}
+
+.list {
+  padding: 14px;
+  width: 80px;
+  display: block;
+  background-color: rgba(255, 153, 0, 0.65);
+  }
+
+.active{
+  background-color: rgb(255, 153, 0); /*리스트 현재 위치 표시*/
+}
+
+html, body {
+  margin: 0px; padding: 0px;
+}
+
+body {
+  background-color: rgba(221, 173, 111, 0.4);
+}
+
+.title {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.text_center{
+  text-align: center;
+}
+
+.top{
+  margin-top: 3%;
+}
+
+#panel {
+font-size: 16px;
+padding: 0px;
+text-align: center;
+background-color: #333;
+color: white;
+border: solid 0px;
+margin: auto;
+position: absolute;
+overflow-y:scroll;
+height: 100vh;  /*https://query.tistory.com/entry/CSS-%ED%99%94%EB%A9%B4-%EA%B0%80%EB%93%9D-%EB%86%92%EC%9D%B4-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95*/
+}
+#panel {
+display: none;
+}
+#color{
+display: none;
+}
+#ping{
+display: none;
+}
+#allmenu {
+background-color: #333;
+}
+.menu {
+padding: 14px;
+width: 80px;
+display: block;
+}
+.box {
+  float: left;
+  width: 50px;
+  padding: 50px;
+  border: solid 0.5px;
+}
+.clearfix{
+  margin-left: auto;
+  margin-right: auto;
+  content: "";
+  clear: both;
+  display: table;
+}
+.play {
+ box-sizing: border-box;
+}
+button{
+  font-size: 16px;
+  padding: 15px 32px;
+  text-align: center;
+  background-color: #e27435;
+  display:block;
+  margin:auto;
+  margin-bottom:10%;
+}
+button:hover{
+  background-color: #e69363;
+}

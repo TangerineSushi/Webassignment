@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>색깔구별_1스테이지</title>
+  <link rel="stylesheet" href="../../css/mystyle.css">
+
+  <style>
+  </style>
+</head>
+<body>
+  <svg height="90" width="100%">
+    <!-- <defs> 요소는 그래픽 객체를 정의, <def> 요소 내에서 만든 객체는 출력되는 것은 아님
+         나중에 사용하려면 fill 속성에 참조 연결하거나 <use> 요소를 이용해야함 
+         <def> 요소 내에 선형그레디언트 정의 -->
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:rgb(207, 138, 47);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(160, 108, 40);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <rect fill="url(#grad1)" x="0" y="0" width="100%" height="90" style="stroke-width:14;stroke:rgb(0,0,0)" />
+    <text fill="#000000" text-anchor="middle" alignment-baseline="middle" x="50%" y="58%" font-size="60" font-family="Verdana" style="text-align: center;">미니게임</text>
+    Sorry, your browser does not support inline SVG.
+  </svg>
+    
+  <ul class="font-zero">
+    <li><a class="menu" id="allmenu" onclick="myFunction()" style="cursor:pointer">전체메뉴</a>
+      <div id="panel">
+        <a onclick="color()" class="list active" style="cursor:pointer">색깔구별</a>
+          <div id="color">
+            <a class="menu" href="./color_main.html">메인화면</a>
+            <a class="menu  active" href="./color_1.html">1스테이지</a>
+            <a class="menu" href="./color_2.html">2스테이지</a>
+            <a class="menu" href="./color_3.html">3스테이지</a>
+            <a class="menu" href="./color_4.html">4스테이지</a>
+            <a class="menu" href="./color_5.html">5스테이지</a>
+            <a class="menu" href="./color_fail.html">패배화면</a>
+            <a class="menu" href="./color_success.html">승리화면</a>
+          </div>
+        <a onclick="pingpong()" class="list" style="cursor:pointer">핑퐁</a>
+          <div id="ping">
+            <a class="menu" href="../pingpong/pingpong_main.html">메인화면</a>
+            <a class="menu" href="../pingpong/pingpong_play.html">게임화면</a>
+          </div>
+        <a class="blink"></a>
+      </div>
+    </li>
+    <li><a href="../../index.html">홈</a></li>
+    <li><a class="active" href="./color_main.html">색깔구별</a></li>
+    <li><a href="../pingpong/pingpong_main.html">핑퐁</a></li>
+  </ul>
+
+  <h1 class="text_center top">1스테이지</h1>
+
+  <div class="clearfix play top">
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+  </div>
+  <div class="clearfix play">
+    <div class="box play" onclick="location.href='./color_2.html'" style="background-color:rgba(48, 142, 250, 0.9)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+  </div>
+  <div class="clearfix play">
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+  </div>
+  <div class="clearfix play">
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+  </div>
+  <div class="clearfix play">
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+    <div class="box play" onclick="location.href='./color_fail.html'" style="background-color:rgb(48, 142, 250)"></div>
+  </div>
+
+  <script>
+    function myFunction() {
+      if (document.getElementById("panel").style.display == "block"){
+        document.getElementById("panel").style.display = "none";
+        document.getElementById("allmenu").style.backgroundColor = "#333";
+      }
+      else{
+        document.getElementById("panel").style.display = "block";
+        document.getElementById("allmenu").style.backgroundColor = "rgba(255, 153, 0, 0.829)";
+      }
+    }
+    function color() {
+      if (document.getElementById("color").style.display == "block"){
+        document.getElementById("color").style.display = "none";
+      }
+      else{
+        document.getElementById("color").style.display = "block";
+      }
+    }
+    function pingpong() {
+      if (document.getElementById("ping").style.display == "block"){
+        document.getElementById("ping").style.display = "none";
+      }
+      else{
+        document.getElementById("ping").style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
